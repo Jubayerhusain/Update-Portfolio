@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+/* Adds a subtle grid background */
+.bg-glowing-grid {
+  background-color: #030712; /* A very dark charcoal */
+  background-image: radial-gradient(
+      rgba(255, 255, 255, 0.05) 1px,
+      transparent 1px
+    ),
+    radial-gradient(
+      rgba(255, 255, 255, 0.05) 1px,
+      transparent 1px
+    );
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+}
+
+/* Adds a glowing effect around the borders of the section */
+.border-glowing-emerald::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  z-index: -1;
+  background: linear-gradient(
+    45deg,
+    #10b981,
+    #34d399,
+    #10b981
+  ); /* Emerald gradient */
+  filter: blur(8px);
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+/* Optional: Add a hover effect to intensify the glow */
+.border-glowing-emerald:hover::before {
+  opacity: 1;
+}
