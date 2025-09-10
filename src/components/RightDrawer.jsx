@@ -3,14 +3,16 @@ import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import Button from '@mui/material/Button';
 import List from '@mui/material/List';
-import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
+import Person4Icon from '@mui/icons-material/Person4';
+import BoltIcon from '@mui/icons-material/Bolt';
+import AppRegistrationIcon from '@mui/icons-material/AppRegistration';
+import ContactsIcon from '@mui/icons-material/Contacts';
+
 export default function RightDrawer() {
   const [open, setOpen] = React.useState(false);
 
@@ -21,6 +23,13 @@ export default function RightDrawer() {
     setOpen(status);
   };
 
+  const navItem = [
+    { text: 'About Me', href: '#About Me', icon: <Person4Icon /> },
+    { text: 'Skills', href: '#Skills', icon: <BoltIcon /> },
+    { text: 'Projects', href: '#Projects', icon: <AppRegistrationIcon /> },
+    { text: 'Contact', href: '#Contact', icon: <ContactsIcon /> },
+  ]
+
   const list = () => (
     <Box
       sx={{ width: 250 }}
@@ -28,30 +37,34 @@ export default function RightDrawer() {
       onClick={toggleDrawer(false)}
       onKeyDown={toggleDrawer(false)}
     >
-      <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+      <List sx={
+        {
+          backgroundColor: '#3B82F6',
+          height: '100vh',
+          color: 'white',
+          paddingTop: '20px'
+        }
+      }>
+        {navItem.map((item) => (
+          <ListItem key={item.text} disablePadding>
+            <ListItemButton
+              component="a"
+              href={item.href} 
+              sx={{
+                "&:hover": {
+                  backgroundColor: "#2563EB",
+                  color: "white",
+                },
+              }}
+            >
+              <ListItemIcon sx={{ color: "white" }}>
+                {item.icon}
               </ListItemIcon>
-              <ListItemText primary={text} />
+              <ListItemText primary={item.text} />
             </ListItemButton>
           </ListItem>
         ))}
-      </List>
-      <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
+
       </List>
     </Box>
   );

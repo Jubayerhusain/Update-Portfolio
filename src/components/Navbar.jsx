@@ -13,6 +13,10 @@ export default function Navbar() {
       component="nav"
       aria-label="My site"
       sx={{
+        position: "fixed",
+        width: "100%",
+        top: 0,
+        zIndex: 1000, 
         display: "flex",
         alignItems: "center",
         padding: "0 16px",
@@ -25,7 +29,7 @@ export default function Navbar() {
       <Box sx={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
         <ListItemButton
           component="a"
-          href="#home"
+          href="#About Me"
           aria-label="Home"
           sx={{ minWidth: "auto" }}
         >
@@ -38,21 +42,31 @@ export default function Navbar() {
         role="menubar"
         orientation="horizontal"
         sx={{
-          display: { xs: "none", sm: "flex" }, 
+          display: { xs: "none", sm: "flex" },
           marginLeft: 2,
           flexGrow: 1,
         }}
       >
-        {["About Me","Skills","Projects", "Contact"].map((item) => (
+        {["About Me", "Skills", "Projects", "Contact"].map((item) => (
           <React.Fragment key={item}>
             <ListItem role="none">
-              <ListItemButton role="menuitem" component="a" href={`#${item}`}>
+              <ListItemButton
+                role="menuitem"
+                component="a"
+                href={`#${item}`}
+                sx={{
+                  fontWeight: "bold",
+                  textTransform: "uppercase",
+                  transition: "all 0.3s ease",
+                }}
+              >
                 {item}
               </ListItemButton>
             </ListItem>
             <ListDivider />
           </React.Fragment>
         ))}
+
       </List>
 
       {/* Right Drawer Button */}

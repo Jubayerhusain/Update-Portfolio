@@ -15,7 +15,7 @@ export default function HeroSection() {
   });
 
   return (
-    <section className="relative rounded-t-xl bg-gradient-to-b from-gray-900 border-none to-gray-800 text-white overflow-hidden read-the-docs">
+    <section className="relative mt-10 rounded-t-xl bg-gradient-to-b from-gray-900 border-none to-gray-800 text-white overflow-hidden read-the-docs">
       {/* Background shape */}
       <div className="absolute bottom-0 left-0 w-64 h-64 bg-emerald-400 rounded-full mix-blend-multiply opacity-30 animate-pulse -z-10"></div>
 
