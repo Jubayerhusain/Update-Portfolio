@@ -173,7 +173,7 @@ import AOS from "aos";
 
 export default function ProjectsSection() {
   const [repos, setRepos] = useState([]);
-  const [activeTab, setActiveTab] = useState("All");
+  const [activeTab, setActiveTab] = useState("All Repositories");
   const [filteredRepos, setFilteredRepos] = useState([]);
 
   const tabs = ["All Repositories", "Full Stack", "Front End", "Back End"];
@@ -291,6 +291,7 @@ export default function ProjectsSection() {
               data-aos-delay={`${index * 150}`}
             >
               <div className="flex items-center mb-4">
+
                 <div className="w-12 h-12 flex items-center justify-center rounded-full bg-gray-700 text-white font-bold mr-4">
                   {repo.name.charAt(0).toUpperCase()}
                 </div>
