@@ -1,15 +1,9 @@
 import { PhoneAndroid } from "@mui/icons-material";
 import React, { useEffect } from "react";
+import Swal from "sweetalert2";
 
 const Contact = () => {
-    // Note: The AOS library cannot be directly imported in this environment.
-    // The visual effects will not work without it.
-    useEffect(() => {
-        // Fallback for AOS if it were available
-        // AOS.init({ duration: 1500, once: true });
-    }, []);
 
-    // Inline SVG for icons to avoid external library dependencies
     const EnvelopeIcon = () => (
         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
             <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
@@ -82,37 +76,87 @@ const Contact = () => {
                     </div>
 
                     {/* Right Section - Form */}
-                    <form className="p-8 rounded-xl relative">
+                    <form
+                        action="https://formspree.io/f/mdklblod"
+                        method="POST"
+                        className="p-8 rounded-xl relative"
+                        onSubmit={async (e) => {
+                            e.preventDefault();
+                            const form = e.target;
+                            const formData = new FormData(form);
+
+                            try {
+                                const response = await fetch(form.action, {
+                                    method: "POST",
+                                    body: formData,
+                                    headers: { Accept: "application/json" },
+                                });
+
+                                if (response.ok) {
+                                    Swal.fire({
+                                        title: "Message Sent!",
+                                        text: "Thanks for contacting me. I will reply soon.",
+                                        icon: "success",
+                                        confirmButtonText: "OK",
+                                        timer: 3000,
+                                    });
+                                    form.reset();
+                                } else {
+                                    Swal.fire({
+                                        title: "Oops!",
+                                        text: "Something went wrong. Please try again later.",
+                                        icon: "error",
+                                        confirmButtonText: "OK",
+                                    });
+                                }
+                            } catch (error) {
+                                Swal.fire({
+                                    title: "Error!",
+                                    text: "Network error. Please try again later.",
+                                    icon: "error",
+                                    confirmButtonText: "OK",
+                                });
+                            }
+                        }}
+                    >
                         <h2 className="text-3xl sm:text-4xl font-extrabold text-white text-center mb-10">
                             Send Me a <span className="text-emerald-400">Message</span>
                         </h2>
+
                         <div className="space-y-6">
                             <input
                                 type="text"
+                                name="name"
                                 placeholder="Your Name"
+                                required
                                 className="bg-gray-800 border border-gray-700 w-full p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 text-white placeholder-gray-400 transition-colors duration-300"
                             />
                             <input
                                 type="email"
+                                name="email"
                                 placeholder="Your Email"
+                                required
                                 className="bg-gray-800 border border-gray-700 w-full p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 text-white placeholder-gray-400 transition-colors duration-300"
                             />
                             <textarea
+                                name="message"
                                 placeholder="Your Message"
+                                required
                                 className="bg-gray-800 border border-gray-700 w-full p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 text-white placeholder-gray-400 transition-colors duration-300"
                                 rows={5}
                             ></textarea>
                         </div>
+
                         <div className="flex justify-center mt-10">
-                            <a
-                                href="#"
-                                rel="noopener noreferrer"
+                            <button
+                                type="submit"
                                 className="inline-block bg-gradient-to-r from-emerald-400 to-blue-500 hover:from-blue-500 hover:to-emerald-400 text-white font-bold py-4 px-10 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300"
                             >
                                 SEND MESSAGE
-                            </a>
+                            </button>
                         </div>
                     </form>
+
                 </div>
             </section>
             <footer className="w-full text-center bg-emerald-500 text-gray-900 text-md py-5 font-bold">
