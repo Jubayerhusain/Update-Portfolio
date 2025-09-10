@@ -24,8 +24,8 @@ const AboutMe = () => {
                         </p>
                         <div className="mt-10 flex flex-wrap justify-center lg:justify-start gap-5 animate-fade-in-up delay-600">
                             <a
-                                href="https://drive.google.com/file/d/1OSxkDsYQIitteA_hFqvuPtO8SM6-qkzR/view?usp=sharing"
-                                target='_blank'
+                                href="https://drive.usercontent.google.com/u/0/uc?id=1OSxkDsYQIitteA_hFqvuPtO8SM6-qkzR&export=download"
+                                // target='_blank'
                                 className="px-8 py-3 border border-transparent text-lg font-medium rounded-full text-white bg-blue-600 hover:bg-blue-700 transition-all duration-300 transform hover:-translate-y-1 shadow-lg"
                             >
                                Download Resume

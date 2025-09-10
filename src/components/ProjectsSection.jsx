@@ -4,36 +4,13 @@
 
 // const allProjects = [
 //   {
+//     //Full Stack Project 
 //     category: "Full Stack",
-//     title: "E-commerce Platform",
+//     title: "Parcel Management System",
 //     role: "Full Stack Developer",
-//     description: "Developed a robust e-commerce solution with user authentication, product management, and secure payment processing.",
-//     features: ["User Auth (JWT)", "Shopping Cart", "Payment Gateway", "Admin Dashboard"],
-//     image: "https://via.placeholder.com/60x60/334155/6b7280?text=FS", // Placeholder for image
-//   },
-//   {
-//     category: "Front End",
-//     title: "Interactive Portfolio",
-//     role: "Front End Developer",
-//     description: "Designed and built a dynamic, responsive portfolio showcasing various projects with engaging animations.",
-//     features: ["Responsive Design", "AOS Animations", "Typewriter Effect", "Skill Constellation"],
-//     image: "https://via.placeholder.com/60x60/334155/6b7280?text=FE",
-//   },
-//   {
-//     category: "Back End",
-//     title: "RESTful API Service",
-//     role: "Back End Developer",
-//     description: "Created a scalable RESTful API to manage user data, products, and orders, with robust error handling.",
-//     features: ["Express.js", "MongoDB Atlas", "Authentication", "Rate Limiting"],
-//     image: "https://via.placeholder.com/60x60/334155/6b7280?text=BE",
-//   },
-//   {
-//     category: "Mobile",
-//     title: "Expense Tracker App",
-//     role: "Mobile Developer",
-//     description: "Developed a cross-platform mobile application for tracking daily expenses and visualizing spending habits.",
-//     features: ["React Native", "Local Storage", "Data Visualization", "Offline Support"],
-//     image: "https://via.placeholder.com/60x60/334155/6b7280?text=MB",
+//     description: "Welcome to the Parcel Management System — a dynamic and feature-rich MERN stack application designed to streamline parcel delivery operations. From booking parcels to assigning delivery personnel and monitoring statuses, this app has everything covered! .",
+//     features: ["User Auth (JWT)", "User-Friendly Authentication", "Responsive Design", "Admin Dashboard", "Real-time Notifications", "Parcel Tracking"],
+//     image: "https://via.placeholder.com/60x60/334155/6b7280?text=FS",
 //   },
 //   {
 //     category: "Full Stack",
@@ -43,6 +20,16 @@
 //     features: ["User Profiles", "Post Management", "Real-time Updates", "Search Functionality"],
 //     image: "https://via.placeholder.com/60x60/334155/6b7280?text=FS",
 //   },
+
+//   // Front End Project 
+//   {
+//     category: "Front End",
+//     title: "Interactive Portfolio",
+//     role: "Front End Developer",
+//     description: "Designed and built a dynamic, responsive portfolio showcasing various projects with engaging animations.",
+//     features: ["Responsive Design", "AOS Animations", "Typewriter Effect", "Skill Constellation"],
+//     image: "https://via.placeholder.com/60x60/334155/6b7280?text=FE",
+//   },
 //   {
 //     category: "Front End",
 //     title: "Dashboard UI Kit",
@@ -51,6 +38,17 @@
 //     features: ["Modular Components", "Dark/Light Theme", "Data Tables", "Customizable Charts"],
 //     image: "https://via.placeholder.com/60x60/334155/6b7280?text=FE",
 //   },
+
+//   // Back End Project
+//   {
+//     category: "Back End",
+//     title: "RESTful API Service",
+//     role: "Back End Developer",
+//     description: "Created a scalable RESTful API to manage user data, products, and orders, with robust error handling.",
+//     features: ["Express.js", "MongoDB Atlas", "Authentication", "Rate Limiting"],
+//     image: "https://via.placeholder.com/60x60/334155/6b7280?text=BE",
+//   },
+
 // ];
 
 // export default function ProjectsSection() {
@@ -71,7 +69,7 @@
 //     }
 //   }, [activeTab]);
 
-//   const tabs = ["All", "Full Stack", "Front End", "Back End", "Mobile"];
+//   const tabs = ["All", "Full Stack", "Front End", "Back End"];
 
 //   return (
 //     <section id="Projects" className=" relative py-20 px-4 sm:px-6 lg:px-8 bg-gray-950 text-white overflow-hidden">
@@ -80,7 +78,7 @@
 //         <div className="absolute top-1/2 left-1/2 w-[600px] h-[600px] bg-emerald-400 rounded-full mix-blend-multiply blur-[150px] opacity-20 transform -translate-x-1/2 -translate-y-1/2 animate-flow"></div>
 //         <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-emerald-600 rounded-full mix-blend-multiply blur-[120px] opacity-15 transform translate-x-1/2 animate-flow-reverse"></div>
 //       </div>
-      
+
 //       <div className="relative max-w-7xl mx-auto z-10 text-center">
 //         <h2
 //           className="text-4xl sm:text-5xl font-extrabold text-white mb-12"
@@ -98,11 +96,10 @@
 //           {tabs.map((tab) => (
 //             <button
 //               key={tab}
-//               className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
-//                 activeTab === tab
-//                   ? "bg-emerald-500 text-white shadow-lg"
-//                   : "bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white"
-//               }`}
+//               className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${activeTab === tab
+//                 ? "bg-emerald-500 text-white shadow-lg"
+//                 : "bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white"
+//                 }`}
 //               onClick={() => setActiveTab(tab)}
 //             >
 //               {tab}
@@ -179,7 +176,38 @@ export default function ProjectsSection() {
   const [activeTab, setActiveTab] = useState("All");
   const [filteredRepos, setFilteredRepos] = useState([]);
 
-  const tabs = ["All", "Full Stack", "Front End", "Back End", "Mobile"];
+  const tabs = ["All Repositories", "Full Stack", "Front End", "Back End"];
+
+  // Custom Projects (only for specific tabs)
+  const customProjects = [
+    {
+      id: 1,
+      name: "MERN Shop",
+      description: "Full-stack e-commerce platform",
+      language: "JavaScript",
+      topics: ["mern", "ecommerce", "mongodb"],
+      html_url: "#",
+      type: "Full Stack",
+    },
+    {
+      id: 2,
+      name: "React Portfolio",
+      description: "Personal portfolio with animations",
+      language: "React",
+      topics: ["frontend", "tailwind", "aos"],
+      html_url: "#",
+      type: "Front End",
+    },
+    {
+      id: 3,
+      name: "Node API",
+      description: null,
+      language: "Node.js",
+      topics: ["backend", "express"],
+      html_url: "#",
+      type: "Back End",
+    },
+  ];
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
@@ -188,29 +216,25 @@ export default function ProjectsSection() {
       .then((res) => res.json())
       .then((data) => {
         const originalRepos = data.filter((repo) => !repo.fork);
-        setRepos(originalRepos);
-        setFilteredRepos(originalRepos);
+
+        const sortedRepos = originalRepos.sort((a, b) => {
+          if (a.description && !b.description) return -1;
+          if (!a.description && b.description) return 1;
+          return 0;
+        });
+
+        setRepos(sortedRepos);
+        setFilteredRepos(sortedRepos);
       })
       .catch((err) => console.error(err));
   }, []);
 
   useEffect(() => {
-    if (activeTab === "All") {
+    if (activeTab === "All Repositories") {
       setFilteredRepos(repos);
     } else {
       setFilteredRepos(
-        repos.filter((repo) => {
-          const name = repo.name.toLowerCase();
-          if (activeTab === "Full Stack")
-            return name.includes("mern") || name.includes("fullstack");
-          if (activeTab === "Front End")
-            return name.includes("react") || name.includes("frontend");
-          if (activeTab === "Back End")
-            return name.includes("node") || name.includes("backend");
-          if (activeTab === "Mobile")
-            return name.includes("react-native") || name.includes("mobile");
-          return false;
-        })
+        customProjects.filter((project) => project.type === activeTab)
       );
     }
   }, [activeTab, repos]);
@@ -220,7 +244,7 @@ export default function ProjectsSection() {
       id="Projects"
       className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gray-950 text-white overflow-hidden"
     >
-      {/* Premium Background */}
+      {/* Background */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-1/2 left-1/2 w-[600px] h-[600px] bg-emerald-400 rounded-full mix-blend-multiply blur-[150px] opacity-20 transform -translate-x-1/2 -translate-y-1/2 animate-flow"></div>
         <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-emerald-600 rounded-full mix-blend-multiply blur-[120px] opacity-15 transform translate-x-1/2 animate-flow-reverse"></div>
@@ -243,11 +267,10 @@ export default function ProjectsSection() {
           {tabs.map((tab) => (
             <button
               key={tab}
-              className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
-                activeTab === tab
+              className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${activeTab === tab
                   ? "bg-emerald-500 text-white shadow-lg"
                   : "bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white"
-              }`}
+                }`}
               onClick={() => setActiveTab(tab)}
             >
               {tab}
@@ -275,7 +298,9 @@ export default function ProjectsSection() {
                   <h3 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors duration-300">
                     {repo.name}
                   </h3>
-                  <p className="text-sm text-gray-400">{repo.language || "Unknown"}</p>
+                  <p className="text-sm text-gray-400">
+                    {repo.language || "Unknown"}
+                  </p>
                 </div>
               </div>
               <p className="text-gray-300 text-sm leading-relaxed mb-3">
