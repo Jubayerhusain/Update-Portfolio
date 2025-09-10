@@ -69,10 +69,10 @@ const Contact = () => {
                             </div>
                         </div>
                         <div className="flex mt-8 gap-6">
-                            <a href="https://www.facebook.com/jubayer.husain.627354" target="_blank" rel="noopener noreferrer" className="text-white transition-all duration-300 transform hover:scale-125 hover:text-blue-500">
+                            <a href="https://www.facebook.com/jubayer6484" target="_blank" rel="noopener noreferrer" className="text-white transition-all duration-300 transform hover:scale-125 hover:text-blue-500">
                                 <FacebookIcon />
                             </a>
-                            <a href="https://www.linkedin.com/in/jubayer-husain-a83490330" target="_blank" rel="noopener noreferrer" className="text-white transition-all duration-300 transform hover:scale-125 hover:text-blue-600">
+                            <a href="https://www.linkedin.com/in/jubayer-husain/" target="_blank" rel="noopener noreferrer" className="text-white transition-all duration-300 transform hover:scale-125 hover:text-blue-600">
                                 <LinkedinIcon />
                             </a>
                             <a href="https://github.com/Jubayerhusain" target="_blank" rel="noopener noreferrer" className="text-white transition-all duration-300 transform hover:scale-125 hover:text-gray-400">
