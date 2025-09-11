@@ -230,7 +230,7 @@ export default function ProjectsSection() {
       type: "Front End",
     },
     {
-      id: 5,
+      id: 6,
       name: "Dimers Clone is a sports betting odds and prediction platform",
       description: "Dimers Clone is a sports betting odds and prediction platform that allows users to explore upcoming games, compare betting odds, and view data-driven predictions. Built with React and Tailwind CSS for a sleek UI.",
       language: "JavaScript",
@@ -239,7 +239,7 @@ export default function ProjectsSection() {
       type: "Front End",
     },
     {
-      id: 6,
+      id: 7,
       name: "Tribute Website for Dr. Muhammad Yunus",
       description: "A responsive tribute web application dedicated to Dr. Muhammad Yunus, Nobel Peace Prize Laureate and founder of Grameen Bank. The website highlights his life, achievements, and contributions to social entrepreneurship, microfinance, and poverty alleviation through a clean and modern UI/UX design.",
       language: "JavaScript",
@@ -248,7 +248,7 @@ export default function ProjectsSection() {
       type: "Front End",
     },
     {
-      id: 7,
+      id: 8,
       name: "Tribute Website for Shahid President Ziaur Rahman",
       description: "A responsive web application dedicated to Shahid President Ziaur Rahman, the 7th President of Bangladesh. The website showcases his life, achievements, leadership, and contributions to the nation with a clean and modern frontend design, highlighting key moments in Bangladesh’s history",
       language: "JavaScript",
@@ -257,15 +257,16 @@ export default function ProjectsSection() {
       type: "Front End",
     },
     {
-      id: 8,
+      id: 9,
       name: "Legal Solutions Web Application",
       description: "A modern and responsive web application designed for Legal Solutions, a platform that connects clients with legal services and resources. Built with a clean UI/UX, the app allows users to explore legal services, book consultations, and access important legal information efficiently and securely.",
       language: "JavaScript",
       topics: ["React.js", "Tailwind CSS", "React Icons", "React Router",],
       html_url: "https://legal-solutions-wheat.vercel.app/",
       type: "Front End",
-    }, {
-      id: 9,
+    },
+    {
+      id: 10,
       name: "GadgetHaven — an interactive e-commerce platform",
       description: " GadgetHaven — an interactive e-commerce platform dedicated to gadget enthusiasts! This website allows users to browse, search, and purchase gadgets with ease, offering a streamlined and visually engaging shopping experience..",
       language: "JavaScript",
