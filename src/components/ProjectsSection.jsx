@@ -182,30 +182,85 @@ export default function ProjectsSection() {
   const customProjects = [
     {
       id: 1,
-      name: "MERN Shop",
-      description: "Full-stack e-commerce platform",
+      name: "Parcel Management System",
+      description: "Parcel Management System — a dynamic and feature-rich MERN stack application designed to streamline parcel delivery operations",
       language: "JavaScript",
-      topics: ["mern", "ecommerce", "mongodb"],
-      html_url: "#",
+      topics: ["mongodb", "React.js", "Tailwind CSS", "TanStack Query", "Node.js", "Express.js", "Firebase Auth", "React Apex Charts", "JWT", "MapBox",
+        "React-Map-GL", "Animation"],
+      html_url: "https://shipmate-a7377.web.app/",
       type: "Full Stack",
     },
     {
       id: 2,
-      name: "React Portfolio",
-      description: "Personal portfolio with animations",
-      language: "React",
-      topics: ["frontend", "tailwind", "aos"],
-      html_url: "#",
-      type: "Front End",
+      name: "Tutor Booking Platform",
+      description: "Online Tutor Booking Platform, a solution designed to connect learners with skilled tutors worldwide. Whether it's language learning or subject-specific tutoring",
+      language: "JavaScript",
+      topics: ["mongodb", "React.js", "Tailwind CSS", "TanStack Query", "Node.js", "Express.js", "Firebase Auth", "JWT", " Animation"],
+      html_url: "https://turtorsphere.web.app/",
+      type: "Full Stack",
     },
     {
       id: 3,
-      name: "Node API",
-      description: null,
-      language: "Node.js",
-      topics: ["backend", "express"],
-      html_url: "#",
-      type: "Back End",
+      name: "EquiSports is a cutting-edge e-commerce platform",
+      description: "EquiSports is a cutting-edge e-commerce platform designed for sports enthusiasts. It offers a seamless shopping experience for various sports equipment and accessories, combining user-friendly navigation, secure authentication, and responsive design.",
+      language: "JavaScript",
+      topics: ["mongodb", "React.js", "Tailwind CSS", "TanStack Query", "Node.js", "Express.js", "Firebase Auth", "JWT", " Animation"],
+      html_url: "https://equipify-603ef.web.app/",
+      type: "Full Stack",
+    },
+    {
+      id: 4,
+      name: "Pathfinder Pro is a career counseling web application",
+      description: "Pathfinder Pro is a career counseling web application designed to help individuals explore career paths, receive personalized advice, and access resources for building their dream careers.",
+      language: "JavaScript",
+      topics: ["mongodb", "React.js", "Tailwind CSS", "TanStack Query", "Node.js", "Express.js", "Firebase Auth", "JWT", " Animation"],
+      html_url: "https://pathfinder-pro-b76a5.web.app/",
+      type: "Full Stack",
+    },
+    {
+      id: 5,
+      name: "Spice Symphony Restaurant Management System",
+      description: "Spice Symphony Client is a responsive food ordering web app that allows users to browse restaurant menus, customize dishes, and place orders seamlessly. Developed with React and Tailwind CSS for a smooth user experience",
+      language: "JavaScript",
+      topics: ["React.js", "Tailwind CSS", "TanStack Query", "JWT", " Animation",],
+      html_url: "https://spice-symphony-client.vercel.app/",
+      type: "Front End",
+    },
+    {
+      id: 5,
+      name: "Dimers Clone is a sports betting odds and prediction platform",
+      description: "Dimers Clone is a sports betting odds and prediction platform that allows users to explore upcoming games, compare betting odds, and view data-driven predictions. Built with React and Tailwind CSS for a sleek UI.",
+      language: "JavaScript",
+      topics: ["React.js", "Tailwind CSS", "Marquee.js", "React Icons", "React Router",],
+      html_url: "https://dimerspro.surge.sh/?fbclid=IwY2xjawHRz3xleHRuA2FlbQIxMAABHWujfE6FbMAXH87ZNvas1jrc2nJxuq7l1-awYniyhzvJag7b37F47Jl5Pw_aem_YJwam-lv0nAu-xCzT87quA",
+      type: "Front End",
+    },
+    {
+      id: 6,
+      name: "Tribute Website for Dr. Muhammad Yunus",
+      description: "A responsive tribute web application dedicated to Dr. Muhammad Yunus, Nobel Peace Prize Laureate and founder of Grameen Bank. The website highlights his life, achievements, and contributions to social entrepreneurship, microfinance, and poverty alleviation through a clean and modern UI/UX design.",
+      language: "JavaScript",
+      topics: ["React.js", "Tailwind CSS", "React Icons", "React Router", "AOS Animation"],
+      html_url: "https://mp-portfolio-template-client.vercel.app/#",
+      type: "Front End",
+    },
+    {
+      id: 7,
+      name: "Tribute Website for Shahid President Ziaur Rahman",
+      description: "A responsive web application dedicated to Shahid President Ziaur Rahman, the 7th President of Bangladesh. The website showcases his life, achievements, leadership, and contributions to the nation with a clean and modern frontend design, highlighting key moments in Bangladesh’s history",
+      language: "JavaScript",
+      topics: ["React.js", "Tailwind CSS", "React Icons", "React Router", "AOS Animation"],
+      html_url: "https://mejore-zia.vercel.app/#",
+      type: "Front End",
+    },
+    {
+      id: 7,
+      name: "Legal Solutions Web Application",
+      description: "A modern and responsive web application designed for Legal Solutions, a platform that connects clients with legal services and resources. Built with a clean UI/UX, the app allows users to explore legal services, book consultations, and access important legal information efficiently and securely.",
+      language: "JavaScript",
+      topics: ["React.js", "Tailwind CSS", "React Icons", "React Router",],
+      html_url: "https://legal-solutions-wheat.vercel.app/",
+      type: "Front End",
     },
   ];
 
@@ -268,8 +323,8 @@ export default function ProjectsSection() {
             <button
               key={tab}
               className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${activeTab === tab
-                  ? "bg-emerald-500 text-white shadow-lg"
-                  : "bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white"
+                ? "bg-emerald-500 text-white shadow-lg"
+                : "bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white"
                 }`}
               onClick={() => setActiveTab(tab)}
             >
