@@ -275,6 +275,34 @@ export default function ProjectsSection() {
       html_url: "https://bd-tech-gadget.surge.sh/",
       type: "Front End",
     },
+    // Back End Projects
+    {
+      id: 11,
+      name: "Online Tutor Booking Platform - Backend",
+      description: "This is the backend of the Online Tutor Booking Platform, a solution designed to connect learners with skilled tutors worldwide. Whether it's language learning or subject-specific tutoring, this backend handles user authentication, tutor management, booking systems, and secure payment processing.",
+      language: "JavaScript",
+      topics: ["Node.js", "Express.js", "MongoDB", "MIddleeware", "JWT", "RESTful API"],
+      html_url: "https://github.com/Jubayerhusain/tutor-Sphere-server-side?tab=readme-ov-file",
+      type: "Back End",
+    },
+    {
+      id: 12,
+      name: "Equipify Server Side - Backend",
+      description: "EquiSports is a cutting-edge e-commerce platform designed for sports enthusiasts. It offers a seamless shopping experience for various sports equipment and accessories, combining user-friendly navigation, secure authentication, and responsive design.",
+      language: "JavaScript",
+      topics: ["Node.js", "Express.js", "MongoDB", "MIddleeware", "JWT", "RESTful API"],
+      html_url: "https://github.com/Jubayerhusain/tutor-Sphere-server-side?tab=readme-ov-file",
+      type: "Back End",
+    },
+    {
+      id: 13,
+      name: "Parcel Management System - Backend",
+      description: "Parcel Management System — a dynamic and feature-rich MERN stack application designed to streamline parcel delivery operations",
+      language: "JavaScript",
+      topics: ["Mongodb", "Node.js", "Express.js", "Firebase Auth", "JWT", "MapBox"],
+      html_url: "https://shipmate-a7377.web.app/",
+      type: "Back End",
+    },
   ];
 
   useEffect(() => {
