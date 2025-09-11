@@ -3,7 +3,7 @@ import React from 'react';
 
 const AboutMe = () => {
     return (
-        <section id="About Me" className=" relative pb-10 sm:py-24 border-none px-4 sm:px-6 lg:px-8 bg-gray-800 text-white overflow-hidden">
+        <section id="About Me" className=" relative pb-10 sm:pb-24 border-none px-4 sm:px-6 lg:px-8 bg-gray-800 text-white overflow-hidden">
             {/* Angled background element */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500 opacity-20 transform rotate-45 -mr-20 mt-10 pointer-events-none"></div>
             <div className="absolute bottom-0 left-0 w-80 h-80 bg-green-500 opacity-15 transform -rotate-30 ml-20 -mb-20 pointer-events-none"></div>
