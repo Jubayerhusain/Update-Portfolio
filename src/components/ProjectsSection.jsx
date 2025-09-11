@@ -173,10 +173,10 @@ import AOS from "aos";
 
 export default function ProjectsSection() {
   const [repos, setRepos] = useState([]);
-  const [activeTab, setActiveTab] = useState("Full Stack");
+  const [activeTab, setActiveTab] = useState("Front End");
   const [filteredRepos, setFilteredRepos] = useState([]);
 
-  const tabs = ["All Repositories", "Full Stack", "Front End", "Back End"];
+  const tabs = ["Front End", "Full Stack", "Back End", "All Repositories"];
 
   // Custom Projects (only for specific tabs)
   const customProjects = [
@@ -222,6 +222,15 @@ export default function ProjectsSection() {
     // Front End Projects
     {
       id: 5,
+      name: "Tribute Website for Dr. Muhammad Yunus",
+      description: "A responsive tribute web application dedicated to Dr. Muhammad Yunus, Nobel Peace Prize Laureate and founder of Grameen Bank. The website highlights his life, achievements, and contributions to social entrepreneurship, microfinance, and poverty alleviation through a clean and modern UI/UX design.",
+      language: "JavaScript",
+      topics: ["React.js", "Tailwind CSS", "React Icons", "React Router", "AOS Animation"],
+      html_url: "https://mp-portfolio-template-client.vercel.app/#",
+      type: "Front End",
+    },
+    {
+      id: 6,
       name: "Spice Symphony Restaurant Management System",
       description: "Spice Symphony Client is a responsive food ordering web app that allows users to browse restaurant menus, customize dishes, and place orders seamlessly. Developed with React and Tailwind CSS for a smooth user experience",
       language: "JavaScript",
@@ -230,7 +239,7 @@ export default function ProjectsSection() {
       type: "Front End",
     },
     {
-      id: 6,
+      id: 7,
       name: "Dimers Clone is a sports betting odds and prediction platform",
       description: "Dimers Clone is a sports betting odds and prediction platform that allows users to explore upcoming games, compare betting odds, and view data-driven predictions. Built with React and Tailwind CSS for a sleek UI.",
       language: "JavaScript",
@@ -238,15 +247,7 @@ export default function ProjectsSection() {
       html_url: "https://dimerspro.surge.sh/?fbclid=IwY2xjawHRz3xleHRuA2FlbQIxMAABHWujfE6FbMAXH87ZNvas1jrc2nJxuq7l1-awYniyhzvJag7b37F47Jl5Pw_aem_YJwam-lv0nAu-xCzT87quA",
       type: "Front End",
     },
-    {
-      id: 7,
-      name: "Tribute Website for Dr. Muhammad Yunus",
-      description: "A responsive tribute web application dedicated to Dr. Muhammad Yunus, Nobel Peace Prize Laureate and founder of Grameen Bank. The website highlights his life, achievements, and contributions to social entrepreneurship, microfinance, and poverty alleviation through a clean and modern UI/UX design.",
-      language: "JavaScript",
-      topics: ["React.js", "Tailwind CSS", "React Icons", "React Router", "AOS Animation"],
-      html_url: "https://mp-portfolio-template-client.vercel.app/#",
-      type: "Front End",
-    },
+
     {
       id: 8,
       name: "Tribute Website for Shahid President Ziaur Rahman",
