@@ -173,13 +173,14 @@ import AOS from "aos";
 
 export default function ProjectsSection() {
   const [repos, setRepos] = useState([]);
-  const [activeTab, setActiveTab] = useState("All Repositories");
+  const [activeTab, setActiveTab] = useState("Full Stack");
   const [filteredRepos, setFilteredRepos] = useState([]);
 
   const tabs = ["All Repositories", "Full Stack", "Front End", "Back End"];
 
   // Custom Projects (only for specific tabs)
   const customProjects = [
+    // Full Stack Projects
     {
       id: 1,
       name: "Parcel Management System",
@@ -217,6 +218,8 @@ export default function ProjectsSection() {
       html_url: "https://pathfinder-pro-b76a5.web.app/",
       type: "Full Stack",
     },
+
+    // Front End Projects
     {
       id: 5,
       name: "Spice Symphony Restaurant Management System",
@@ -254,12 +257,20 @@ export default function ProjectsSection() {
       type: "Front End",
     },
     {
-      id: 7,
+      id: 8,
       name: "Legal Solutions Web Application",
       description: "A modern and responsive web application designed for Legal Solutions, a platform that connects clients with legal services and resources. Built with a clean UI/UX, the app allows users to explore legal services, book consultations, and access important legal information efficiently and securely.",
       language: "JavaScript",
       topics: ["React.js", "Tailwind CSS", "React Icons", "React Router",],
       html_url: "https://legal-solutions-wheat.vercel.app/",
+      type: "Front End",
+    }, {
+      id: 9,
+      name: "GadgetHaven — an interactive e-commerce platform",
+      description: " GadgetHaven — an interactive e-commerce platform dedicated to gadget enthusiasts! This website allows users to browse, search, and purchase gadgets with ease, offering a streamlined and visually engaging shopping experience..",
+      language: "JavaScript",
+      topics: ["React.js", "Tailwind CSS", "React Icons", "React Router", "Rechart.js"],
+      html_url: "https://bd-tech-gadget.surge.sh/",
       type: "Front End",
     },
   ];
