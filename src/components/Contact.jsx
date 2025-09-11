@@ -43,16 +43,16 @@ const Contact = () => {
                     <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-emerald-600 rounded-full mix-blend-multiply blur-[120px] opacity-15 transform translate-x-1/2 animate-flow-reverse"></div>
                 </div>
 
-                <div className="relative container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-10 z-10 p-8 rounded-3xl backdrop-blur-sm bg-gray-900/40 ">
+                <div className="relative container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-10 z-10 sm:p-8 rounded-3xl backdrop-blur-sm bg-gray-900/40 ">
                     {/* Left Section - Contact Info */}
                     <div className="flex flex-col items-center p-8 rounded-2xl">
                         <h2 className="mt-4 text-3xl sm:text-4xl font-extrabold text-white text-center">
                             Let's <span className="text-emerald-400">Connect</span>
                         </h2>
-                        <p className="text-center text-gray-300 mt-4 max-w-lg mx-auto">
+                        <p className="text-center text-gray-300 sm:mt-4 max-w-lg mx-auto">
                             "Start a conversation with me! Let's collaborate and create amazing solutions together."
                         </p>
-                        <div className="mt-8 space-y-4 text-center">
+                        <div className="mt-8 space-y-2 sm:space-y-4 text-center">
                             <div className="flex items-center justify-center gap-3 text-gray-300 transition-all duration-300 hover:text-emerald-400">
                                 <EnvelopeIcon />
                                 <a href="mailto:jubayerhusain360@gmail.com" className="hover:underline">jubayerhusain360@gmail.com</a>

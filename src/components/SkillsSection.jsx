@@ -36,13 +36,13 @@ function SkillsSection() {
   }, []);
 
   return (
-    <section id="Skills" className="relative p-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-900 via-gray-900 to-gray-900 text-white min-h-[60vh] flex flex-col justify-center items-center">
+    <section id="Skills" className="relative p-6 sm:p-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-900 via-gray-900 to-gray-900 text-white sm:min-h-[60vh] flex flex-col justify-center items-center">
       {/* Background shape */}
       <div className="absolute top-10 right-96 w-72 h-72 bg-gray-700 rounded-full mix-blend-multiply opacity-30 blur-2xl animate-pulse"></div>
 
       <div className="container mx-auto">
         <h2
-          className="text-4xl sm:text-5xl font-extrabold text-center text-white mb-16"
+          className="text-4xl sm:text-5xl font-extrabold text-center text-white mb-6 sm:mb-16"
           data-aos="fade-up"
         >
           My <span className="text-emerald-400">Skills</span>
