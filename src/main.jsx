@@ -7,9 +7,11 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import { router } from './routes/routes';
+import Cursor from './components/Cursor';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <Cursor></Cursor>
     <RouterProvider router={router} />
   </StrictMode>,
 )
